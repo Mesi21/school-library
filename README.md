@@ -18,7 +18,7 @@ to:
 
 ```bash
   git clone git@github.com:Mesi21/school-library.git
-  cd into the folder by typing: cd my_Enumeration
+  cd into the folder by typing: cd school-library
 ```
 open your code editor and run 
 ```bash
@@ -32,11 +32,6 @@ open your code editor and run
   - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/)  
   - [Twitter](https://twitter.com/buksimesi21) 
 
-#### :bust_in_silhouette: Joel kalema
-
-- [joel-kalema](https://github.com/Mesi21)
-- [LinkedIn](https://www.linkedin.com/in/joel-kalema-30518a230/)
-- [Twitter](https://twitter.com/JoelJklm)
 
 ## 🤝 Contributing
 
