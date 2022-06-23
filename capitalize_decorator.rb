@@ -1,4 +1,4 @@
-require './base_decorator.rb'
+require './base_decorator'
 
 class CapitalizeDecorator < BaseDecorator
   def initialize(nameable)
@@ -7,6 +7,6 @@ class CapitalizeDecorator < BaseDecorator
   end
 
   def correct_name
-    @nameable.correct_name.capitalize()
+    @nameable.correct_name.capitalize
   end
 end
