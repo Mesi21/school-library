@@ -9,6 +9,6 @@ class Classroom
 
   def add_student(student)
     @students_list.push(student)
-    student.classroom = self
+    student.class = self
   end
 end
