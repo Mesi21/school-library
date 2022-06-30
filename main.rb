@@ -1,3 +1,8 @@
-require './person'
-require './capitalize_decorator'
-require './trimmer_decorator'
+require './app'
+
+def index
+  app = App.new
+  app.run
+end
+
+main
