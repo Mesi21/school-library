@@ -58,7 +58,7 @@ class App
     puts "Please add a rental first." if @rents.empty?
     puts "\n Person\'s ID: "
     p_id = gets.chomp.to_i
-    rentals_list = @rents.select { |rental| rental.person.id == person_id }
+    rentals_list = @rents.select { |rental| rental.person.id == p_id }
     if rentals_list.empty?
       puts 'No rentals found for this person.'
     else
@@ -118,6 +118,9 @@ class App
       create_student
     when '2'
       create_teacher
+    else
+      print 'Please input a correct number!'
+      create_person
     end
     puts "Person created successfully\n"
     gets
@@ -147,7 +150,6 @@ class App
     currRent = Rental.new(rental_date, @people[person_idx.to_i], @books[book_index.to_i])
     puts currRent
     @rents.push(currRent)
-    puts rents
     puts 'Rental added successfully'
     run
   end
