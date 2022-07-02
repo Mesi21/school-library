@@ -3,14 +3,14 @@ require './person'
 class Student < Person
   attr_accessor :classroom
 
-  def initialize(classroom)
-    super()
+  def initialize(age, name, permit, classroom)
+    super(age, name, permit)
     @classroom = classroom
   end
 
-  def class(classroom)
+  def classes(classroom)
     @classroom = classroom
-    classroom.students_list.push(self) unless classroom.students_list.include?(self)
+    classroom.add_student.push(self) unless classroom.add_student.include?(self)
   end
 
   def play_hookey

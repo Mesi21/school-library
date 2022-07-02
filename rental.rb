@@ -6,17 +6,17 @@ class Rental
     @date = date
     @person = person
     @book = book
-    book.rentals_list.push(self)
-    person.rentals_list.push(self)
+    book.add_rental(self)
+    person.add_rental(self)
   end
 
   def add_person(person)
     @person = person
-    person.rentals_list.push(self) unless person.rentals_list.include?(self)
+    person.rents.push(self) unless person.rents.include?(self)
   end
 
   def add_book(book)
     @book = book
-    book.rentals_list.push(self) unless book.rentals_list.include?(self)
+    book.add_book.push(self) unless book.rents.include?(self)
   end
 end
