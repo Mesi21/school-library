@@ -18,7 +18,7 @@ class App
     menu_list.each do |item|
       puts item
     end
-    gets.chomp.to_s
+    gets.chomp
   end
 
   def run
@@ -26,7 +26,7 @@ class App
     case num
     when '1'
       make_list_all_books
-    when '2'
+    when 2
       make_list_all_people
     when '3'
       create_person
