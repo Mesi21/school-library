@@ -1,6 +1,6 @@
 require './app'
 
-def index
+def main
   app = App.new
   app.run
 end
