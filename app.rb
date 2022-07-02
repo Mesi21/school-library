@@ -43,19 +43,19 @@ class App
   end
 
   def list_all_books
-    @books.each_with_index{ |book, idx|
+    @books.each_with_index do |book, idx|
       puts "#{idx} Title: \"#{book.title}\", Author: #{book.author}"
-    }
+    end
   end
 
   def list_all_people
-    @people.each_with_index{ |person, idx|
+    @people.each_with_index do |person, idx|
       puts "#{idx} [#{person.class.name}] Name: #{person.name} Age: #{person.age} ID: #{person.id}}"
-    }
+    end
   end
 
   def list_all_rentals_for_id
-    puts "Please add a rental first." if @rents.empty?
+    puts 'Please add a rental first.' if @rents.empty?
     puts "\n Person\'s ID: "
     p_id = gets.chomp.to_i
     rentals_list = @rents.select { |rental| rental.person.id == p_id }
@@ -94,7 +94,7 @@ class App
     print @people
   end
 
-  def permit(letter)
+  def permit(_letter)
     'N' ? false : true
   end
 
@@ -147,9 +147,8 @@ class App
     person_idx = gets.chomp
     print "\n Date(yyyy/mm/dd): "
     rental_date = gets.chomp
-    currRent = Rental.new(rental_date, @people[person_idx.to_i], @books[book_index.to_i])
-    puts currRent
-    @rents.push(currRent)
+    curr_rent = Rental.new(rental_date, @people[person_idx.to_i], @books[book_index.to_i])
+    @rents.push(curr_rent)
     puts 'Rental added successfully'
     run
   end
